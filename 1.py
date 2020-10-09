@@ -17,6 +17,7 @@ def generate_sequence(n):
         yield x
         if x == x0:
             print("Period " + str(i))
+            break
 
 
 def print_and_save(n, file_name):
