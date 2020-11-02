@@ -11,8 +11,7 @@ def generate_sequence(n):
     c = 144
     x = 3
     for i in range(1, n + 1):
-        if i % 8 == 0:
-            x = int(round(time.time() * 1000)) % m
+        x = (x + int(round(time.time() * 1000))) % m
         x = next_random_number(x, a, c, m)
         yield x
 
@@ -23,6 +22,6 @@ def print_and_save(n, file_name):
             print(i)
             f.write(str(i) + "\n")
 
-
-n = int(input("n = "))
-print_and_save(n, "text.txt")
+if __name__ == "__main__":
+    n = int(input("n = "))
+    print_and_save(n, "text.txt")
