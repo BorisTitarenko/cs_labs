@@ -16,9 +16,6 @@ def generate_sequence(n):
         x = (x + int(round(time.time() * 1000))) % m
         x = next_random_number(x, a, c, m)
 
-        # x = int(round(time.time() * 1000) + x) % m
-        x = next_random_number(x, a, c, m) % 100
-
         yield x
         if x == x0:
             print("Period " + str(i))
